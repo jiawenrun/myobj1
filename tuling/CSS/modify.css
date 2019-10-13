@@ -1,0 +1,366 @@
+body{
+    min-width: 600px;
+}
+.navbar-default {
+    background: #3b5998;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .25);
+    border-bottom: .5px solid #344e86;
+}
+
+.navbar-default .navbar-nav>li>a {
+    font-size: 18px;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, .2);
+    color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #fff;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, .2)
+}
+
+.form-control {
+    margin-left: 10px;
+    background-color: #cbd9f5;
+    padding-right: 50px;
+}
+
+.btn {
+    margin-left: 20px;
+    color: white;
+    background: #4469b5;
+    border-radius: 4px;
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, .5), inset 0 1px 1px 0 rgba(255, 255, 255, .2);
+    font-size: 18px;
+    padding: 5px 20px;
+    border: 0px;
+}
+
+.btn:hover {
+    color: white;
+    background: #4469b5
+}
+
+.denglu {
+    margin-right: 50px;
+}
+
+.navbar>.container-fluid .navbar-brand {
+    margin-left: 50px;
+}
+
+.navbar>.container-fluid .navbar-brand img {
+    width: 160px;
+}
+
+.navbar-brand {
+    padding-top: 5px;
+}
+
+.navbar-toggle {
+    float: left;
+}
+
+@media only screen and (max-width: 767px) {
+    .navbar-brand {
+        padding-left: 16%;
+    }
+}
+
+.navbar-default {
+    border: 0px;
+    border-radius: 0px;
+}
+
+@media (min-width: 768px) {
+    .navbar-form .form-control {
+        width: 250px;
+    }
+}
+
+.navbar-default .navbar-form {
+    border: 0px;
+    text-align: center;
+}
+
+.navbar-default .navbar-nav>li>a {
+    display: flex;
+    justify-content: center;
+}
+
+/* .father{
+    position: absolute;
+} */
+
+.icon1 {
+    position: relative;
+    left: -38px;
+    top: 5px;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .icon1 {
+        left: 45%;
+        top: -26px;
+    }
+}
+
+
+.biaoqian {
+    margin-bottom: 20px;
+}
+
+.biaoqian>div {
+    float: left;
+    width: 103px;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 5px 28px 4px 14px;
+    margin: 8px 10px 8px 0;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: #fcf8e3;
+    background-image: none;
+    color: #a07023;
+    border: 1px solid #fbcc66;
+    border-bottom-width: 2px;
+    border-right-width: 2px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .biaoqian {
+        display: none;
+    }
+}
+
+.biaoqian::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.cilce {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    color: #a07023;
+    border: 2px solid #fbcc66;
+    margin-left: 10px;
+}
+
+.tuijian {
+    border: 1px solid #696969;
+    border-bottom: 0px;
+    text-align: center;
+    font-size: 18px;
+    padding-top: 5px;
+    color: #696969;
+}
+
+.remen, .zuixing {
+    border-bottom: 1px solid #696969;
+    text-align: center;
+    font-size: 18px;
+    padding-top: 5px;
+}
+
+.space {
+    border-bottom: 1px solid #696969;
+    text-align: center;
+    font-size: 18px;
+    padding-top: 5px;
+}
+
+.list-group-item:first-child, .list-group-item:last-child {
+    border-radius: 0;
+}
+
+a.list-group-item:hover {
+    background-color: #dfe6f3;
+}
+
+.left img {
+    width: 116px;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.left .tupian {
+    height: 180px;
+    position: relative;
+}
+
+.left {
+    height: 269px;
+    width: 140px;
+    float: left;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .left {
+        margin-right: 7%;
+    }
+    .leftall{
+        margin-left: 3px;
+    }
+}
+@media (min-width: 1000px){
+    .left {
+        margin-right: 0;
+        margin-left: 0.5%;
+    }
+}
+@media (min-width:1200px){
+    .left {
+        margin-right: 0;
+        margin-left: 4%;
+    }
+}
+.list-group-item {
+    font-size: 18px;
+}
+
+.left>div {
+    width: 114px;
+    font-size: 14px;
+}
+/* .leftall{
+} */
+.zuozhe {
+    white-space: nowrap;
+    overflow: hidden;
+    /* 文字超出样式 */
+    text-overflow: ellipsis;
+}
+.myul {
+    border: 1px solid #69a;
+}
+
+.myul>li>a {
+    border-radius: 0;
+    padding: 10px 30px;
+    font-size: 16px;
+    color: rgb(17, 17, 17);
+}
+
+.myul>li {
+    border-bottom: 1px solid #69a;
+}
+
+.myul>li:last-child {
+    border-bottom: 0;
+}
+
+.myul>li>a:hover {
+    background-color: #dfe6f3;
+}
+
+.myul>li+li {
+    margin-top: 0px;
+}
+
+.mynav {
+    border-radius: 0;
+    background-color: #3b5998;
+}
+
+.mynav a, .mynav a:focus, .mynav a:hover {
+    color: #fff !important;
+}
+
+.mypage>li>a, .mypage>li>span {
+    border: 0;
+    color: #686868;
+    padding: 2px 10px;
+    font-size: 16px;
+    border-radius: 2px;
+    margin: 0 3px;
+}
+
+.mypage>li>a:hover {
+    background-color: #dfe6f3;
+}
+
+.mypage>.active>a, .mypage>.active>a:hover {
+    color: #686868;
+    background-color: #fff;
+    border: 1px solid #a5a5a5;
+}
+.fenye{
+    margin-left:20%;
+}
+.bot{
+    background-color: #f2f2f2;
+}
+.bottom{
+    width: 360px;
+    /* margin: 0 auto; */
+    display: flex;
+    margin-top: 20px;
+    float: right;
+}
+.bottom1,.bottom2,.bottom3{
+    width: 90px;
+    font-size: 14px;
+    text-align: center;
+    border-right: 1px solid #dfe6f3;
+}
+.bottom4{
+    width: 90px;
+    font-size: 14px;
+    text-align: center;
+}
+.bottom>div>a:hover{
+    text-decoration: none;
+    color: orangered;
+}
+.bbb{
+    width: auto;
+   padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.gs{
+    /* float: left; */
+    margin-top: 20px;
+}
+.beianhao{
+    width: auto;
+    margin: 0 50px;
+    color: rgb(204, 204, 204);
+    display: flex;
+}
+.navbar-form{
+    margin-right: 0;
+}
+.container-fluid>.navbar-collapse{
+    border: 0;
+
+}
+.space{
+    padding-top: 9px
+} 
+#demo20{
+    /* margin-left: 20%;
+    margin-top:20px */
+    /* position: relative; */
+    margin: 30px auto; 
+    margin-left: 20%;
+    /* left: 0;
+    right: 0; */
+}
+#remen:hover,#tuijian:hover,#zuixing:hover{
+    cursor: pointer;
+}

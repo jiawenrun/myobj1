@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			#mycanvas {
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+
+	<body>
+		<canvas id="mycanvas" width="600px" height="600px"></canvas>
+		<button id="btn0">开始游戏</button>
+		<button id="btn1">暂停游戏</button>
+		<button id="btn2">结束游戏</button>
+		<button id="btn3">重玩游戏</button>
+		<div id="score"></div>
+		<script type="text/javascript">
+			var mycanvas = document.getElementById("mycanvas");
+			var score = document.getElementById("score");
+			var btn0 = document.getElementById("btn0")
+			var btn1 = document.getElementById("btn1")
+			var btn2 = document.getElementById("btn2")
+			var btn3 = document.getElementById("btn3")
+			var ctx = mycanvas.getContext("2d")
+
+			//游戏
+			class Game {
+				constructor() {
+					this.timer = null;
+					this.newsnake = new snake(2);
+					this.newsnake.drawsnake()
+					window.onkeydown = (e) => {
+						switch (e.keyCode) {
+							case 37:
+								if (this.newsnake.direction != 39) {
+									this.newsnake.direction = 37
+								}
+								break;
+							case 38:
+								if (this.newsnake.direction != 40) {
+									this.newsnake.direction = 38
+								}
+								break;
+							case 39:
+								if (this.newsnake.direction != 37) {
+									this.newsnake.direction = 39
+								}
+								break;
+							case 40:
+								if (this.newsnake.direction != 38) {
+									this.newsnake.direction = 40
+								}
+								break;
+						}
+						/* this.disabled = 'disabled';
+						setTimeout(function() {
+						window.disabled = '';
+						}, 1000); */
+					}
+				}
+				//游戏开始
+				init() {
+					clearInterval(this.timer)
+					this.timer = setInterval(() => {
+						if (this.newsnake.type) {
+
+							this.newsnake.snakemove();
+							this.newsnake.drawsnake();
+						} else {
+							this.end()
+						}
+					}, 250)
+
+				}
+				//游戏暂停
+				stop() {
+					clearInterval(this.timer)
+				}
+				//游戏结束
+				end() {
+					clearInterval(this.timer)
+					// ctx.clearRect(0, 0, mycanvas.width, mycanvas.height);
+					ctx.fillStyle = "red"
+					ctx.font = "300px Arial";
+					ctx.fillText("dead", 200, 300, 200);
+				}
+				//重玩
+				restart() {
+					clearInterval(this.timer)
+					ctx.clearRect(0, 0, mycanvas.width, mycanvas.height);
+					newfood.display();
+					this.newsnake = new snake(2);
+					this.newsnake.drawsnake()
+					this.init()
+				}
+			}
+
+			//方块
+			class rect {
+				constructor(x, y, w, h, color) {
+					this.x = x;
+					this.y = y;
+					this.w = w;
+					this.h = h;
+					this.color = color;
+
+				}
+				drawrect() {
+					ctx.beginPath()
+					ctx.fillStyle = this.color;
+					ctx.rect(this.x, this.y, this.w, this.h);
+					ctx.fill()
+
+				}
+
+			}
+
+			//蛇
+			class snake {
+				constructor(len) {
+					this.snakearray = [];
+					this.head = null;
+					this.len = len;
+					for (let i = 0; i < this.len; i++) {
+						var newrect = new rect(100 + i * 25, 100, 25, 25, "red");
+						this.snakearray.splice(0, 0, newrect)
+					}
+					this.head = this.snakearray[0];
+					this.head.color = "violet";
+					this.direction = 39;
+					this.type = true;
+					// console.log(this.len)
+
+
+				}
+				drawsnake() {
+					for (let i = 0; i < this.snakearray.length; i++) {
+						this.snakearray[i].drawrect()
+					}
+
+
+				}
+				snakemove() {
+					if (!this.judge()) {
+
+					} else {
+						this.eatself()
+						for (let i = 1; i < this.snakearray.length; i++) {
+							ctx.clearRect(this.snakearray[i].x, this.snakearray[i].y, this.snakearray[i].w, this.snakearray[i].h)
+
+							//食物不能掉蛇身上
+							if (newfood.x == this.snakearray[i].x && newfood.y == this.snakearray[i].y) {
+								// this.snakearray.push(1)
+								newfood.display();
+							}
+							
+							//蛇头吃食物
+							else 
+							if(newfood.x == this.head.x &&newfood.y == this.head.y){
+								this.snakearray.push(1)
+								score.innerHTML=this.snakearray.length
+								newfood.display();
+							}
+						}
+
+
+						let newrect = new rect(this.head.x, this.head.y, this.head.w, this.head.h, "red")
+						this.snakearray.splice(1, 0, newrect);
+						this.snakearray.pop();
+						// console.log(this.snakearray.length)
+						switch (this.direction) {
+							case 37:
+								this.head.x -= this.head.w;
+								break;
+							case 38:
+								this.head.y -= this.head.h;
+								break;
+							case 39:
+								this.head.x += this.head.w;
+								break;
+							case 40:
+								this.head.y += this.head.h;
+								break;
+						}
+					}
+				}
+
+				judge() {
+					if (this.head.x < 0 || this.head.x > mycanvas.width - this.head.w || this.head.y < 0 || this.head.y > mycanvas.height -
+						this.head.h) {
+						this.type = false
+						return false
+					} else {
+						this.type = true
+						return true
+					}
+
+
+				}
+				eatself() {
+					for (let i = 4; i < this.snakearray.length; i++) {
+						if (this.head.x == this.snakearray[i].x && this.head.y == this.snakearray[i].y) {
+							this.type = false
+							alert("傻子！你怎么能吃自己呢？")
+							console.log(this.type)
+							return false
+						}
+					}
+				}
+
+			}
+			//food
+			// console.log(this.newsnake.snakearray)
+			class food {
+				constructor() {
+					this.width = 25
+					this.height = 25
+					this.display = () => {
+						ctx.beginPath()
+						ctx.fillStyle = "green";
+						this.x = this.width * (Math.round(Math.random() * (mycanvas.width / this.width - 1)))
+						this.y = this.height * (Math.round(Math.random() * (mycanvas.height / this.height - 1)))
+						// if(this.x==snake.snakearray)
+						ctx.rect(this.x, this.y, this.width, this.height);
+						ctx.fill()
+					}
+				}
+
+			}
+
+			//控制游戏
+			var newgame = new Game();
+			var newfood = new food();
+			newfood.display();
+			btn0.onclick = function() {
+				newgame.init()
+			}
+			btn1.onclick = function() {
+				newgame.stop()
+			}
+			btn2.onclick = function() {
+				newgame.end()
+			}
+			btn3.onclick = function() {
+				newgame.restart()
+			}
+		</script>
+	</body>
+
+</html>

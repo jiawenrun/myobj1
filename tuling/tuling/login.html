@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>图书-图灵社区</title>
+  <link rel="stylesheet" href="../layui/css/layui.css">
+  <link rel="shortcut icon" href="../img/1.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/modify.css">
+  <!-- <link rel="stylesheet" href="../CSS/common.css"> -->
+  <link rel="stylesheet" href="../CSS/login.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid ">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="file:///D:/phpStudySetup/PHPTutorial/WWW/hwork/tuling/index.html">
+          <img src="../img/itr-logo-160x40@2x.png" alt="" srcset="">
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="#">图书</a></li>
+          <li><a href="#">文章</a></li>
+        </ul>
+        <form class="navbar-form navbar-left ">
+          <div class="form-group father">
+            <input type="text" class="form-control" placeholder="技术改变世界&nbsp;阅读塑造人生">
+
+            <a href="#" class="icon1">
+              <span class="glyphicon glyphicon-search " aria-hidden="true"></span>
+            </a>
+          </div>
+        </form>
+        <ul class="nav navbar-nav navbar-form navbar-right">
+          <button type="submit" class="btn btn-default" id="register">新会员注册</button>
+          <button type="submit" class="btn btn-default denglu1" id="login111">登录</button>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <!-- <div class="denglu1">会员登陆</div> -->
+            <form class="form-horizontal myform layui-form">
+                <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10 denglu111"><h3>会员登陆</h3></div>
+                    <label for="inputEmail3" class="col-sm-2 control-label">邮箱</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="username" class="form-control myinput" id="username"
+                            placeholder="邮箱">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control myinputtt" name="passwd" id="passwd"
+                            placeholder="密码">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> 下次自动登陆
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="button" class="btn btn-default  mysubmit mylogin"  lay-submit lay-filter="login">登录</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                    <div class="navbar-left">
+                        <span>没有账号？</span>
+                        <span class="zhuce">注册</span>
+                    </div>
+                    <div class="navbar-right">
+                        <span class="zhuce">找回密码</span>
+                        <span class="zhuce">查找账号</span>
+                    </div>
+                    </div>
+                </div>
+                <div class="form-group ddd">
+                </div>
+                <div class="form-group thhh">
+                  <hr>
+                       <div class="three">第三方登陆</div>
+                    </div>
+            </form>
+        </div>
+        <div class="col-md-3"></div>
+
+    </div>
+
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+<div  class="container-fluid bot">
+  <div class="bbb">
+      <div class="gs">2005-2019 © 北京图灵文化发展有限公司 · All Rights Reserved</div>
+      <div class="bottom">
+
+          <div class="bottom1">
+            <a href="">成为译者</a>
+            </div>
+          <div class="bottom2">
+              <a href="">成为作者</a>
+              </div>
+          <div class="bottom3"> <a href="">加入我们</a></div>
+          <div class="bottom4"><a href="">联系我们</a></div>
+        </div> 
+  </div>
+ <div class="beianhao">
+   <div>京ICP备11039595号</div>
+   <div>京公网安备11010502011375</div>
+   <div>新出发京零字第东110150号</div>
+   <div>统一社会信用代码 91110101777086608F</div>
+ </div>
+</div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+  <script src="../layui/layui.all.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="../JS/Ajax.js"></script>
+  <script src="../JS/login.js"></script>
+</body>
+
+</html>

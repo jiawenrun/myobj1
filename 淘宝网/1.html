@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>轮播图</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .a {
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        li {
+            width: 200px;
+            height: 200px;
+            list-style: none;
+        }
+
+        ul>li:nth-child(1) {
+            background-color: #f08;
+        }
+
+        ul>li:nth-child(2) {
+            background-color: rgba(105, 27, 179, 0.671);
+        }
+
+        ul>li:nth-child(3) {
+            background-color: rgb(27, 230, 230);
+        }
+
+        ul {
+            animation: aaa;
+            animation-duration:3s;
+            animation-iteration-count:infinite;
+        }
+
+        @keyframes aaa {
+
+            0%,
+            10% {
+                transform: translate(0, 0);
+            }
+
+            15%,
+            30% {
+                transform: translate(0, -200px);
+            }
+            45%,
+            70% {
+                transform: translate(0, -400px);
+            }
+       
+        }
+    </style>
+</head>
+
+<body>
+    <div class="a">
+        <ul class="b">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
+
+
+</body>
+
+</html>

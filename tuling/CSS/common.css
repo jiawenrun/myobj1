@@ -1,0 +1,163 @@
+/* 权重值 + 就近原则 */
+
+.h1, h1 {
+    color: aqua;
+    font-size: 32px;
+}
+
+
+.table>thead>tr>th {
+    padding: 12px;
+}
+
+.myinput {
+    border-radius: 0;
+}
+
+.mysubmit {
+    width: 100%;
+    background-color: red;
+    color: #fff;
+    border: 0;
+    border-radius: 0;
+}
+
+.mysubmit:hover {
+    background-color: blue;
+    color: black;
+}
+
+.denglu1 {
+   font-size: 24px;
+   font-weight: 500px;
+   margin-top: 50px;
+   margin-left: 50px;
+   margin-bottom: 50px;
+}
+
+.left {
+    background-color: blue;
+}
+
+.right {
+    background-color: green;
+}
+
+.mystyle {
+    font-size: 24px;
+    color: red;
+}
+
+.my {
+    height: 200px;
+}
+
+.myinputg {
+    margin-bottom: 15px;
+}
+
+
+
+.myul {
+    border: 1px solid #69a;
+}
+
+.myul>li>a {
+    border-radius: 0;
+    padding: 10px 30px;
+    font-size: 16px;
+    color: rgb(17, 17, 17);
+}
+
+.myul>li {
+    border-bottom: 1px solid #69a;
+}
+
+.myul>li:last-child {
+    border-bottom: 0;
+}
+
+.myul>li>a:hover {
+    background-color: #dfe6f3;
+}
+
+.myul>li+li {
+    margin-top: 0px;
+}
+
+.mynav {
+    border-radius: 0;
+    background-color: #3b5998;
+}
+
+.mynav a, .mynav a:focus, .mynav a:hover {
+    color: #fff !important;
+}
+
+.mypage>li>a, .mypage>li>span {
+    border: 0;
+    color: #686868;
+    padding: 2px 10px;
+    font-size: 16px;
+    border-radius: 2px;
+    margin: 0 3px;
+}
+
+.mypage>li>a:hover {
+    background-color: #dfe6f3;
+}
+
+.mypage>.active>a, .mypage>.active>a:hover {
+    color: #686868;
+    background-color: #fff;
+    border: 1px solid #a5a5a5;
+}
+.input-lg{
+    height: 34px;
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+}
+.myinput{
+    height: 34px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.btn {
+    margin-left: 10px;
+    color: white;
+    background: #4469b5;
+    border-radius: 5px;
+
+}
+.mysubmit:hover {
+    color: white;
+    background: #627db4;
+}
+.form-control {
+    background-color: white;
+}
+.checkbox label{
+    padding-left: 30px;
+}
+.zhuce{
+    font-size: 14px;
+    color: rgb(59, 89, 152);
+    font-weight: 700;
+    text-decoration-color:
+    rgb(59, 89, 152)
+}
+.zhuce:hover{
+    color: orangered;
+}
+.ddd{
+    border-bottom: 1px solid #f5f5f5;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+.thhh{
+    margin-bottom: 200px;
+}
+.three{
+    margin-left: 50px;
+}

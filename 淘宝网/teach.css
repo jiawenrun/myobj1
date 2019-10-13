@@ -1,0 +1,221 @@
+html{
+    font-size: calc((14* 100vw) / 320);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* body {
+    background: #fff;
+    font-size: 14px;
+    font-family: -apple-system,Helvetica,sans-serif;
+    line-height: 1.5;
+} */
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.ss img{
+    width: 1.58rem;
+    height: 1.58rem;
+    padding: 0.487rem 0.304rem 0.487rem 0.971rem;
+    position: relative;
+    z-index: 9;
+}
+.ss{
+    position: relative;
+    z-index: 9;
+}
+.top1>div{
+    width: 3.657rem;
+    font-size: 0.914rem;  
+    font-weight: 900;
+    margin-right: 0.642rem;  
+    overflow: hidden;
+}
+.space{
+    width: 100vw;
+    height: 2.428rem;
+
+}
+.top1{
+    
+    height: 1.357rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.top{
+    width: 100vw;
+    height: 2.428rem;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+}
+.gun{
+    width: 2.985rem;
+    height: 0.182rem;
+    /* width: 36px; */
+    margin-left: 3.1rem;
+    overflow: hidden;
+
+}
+.gun>div{
+    width: 2.985rem;
+    height: 0.182rem;
+    background-color: #00b93b;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+.lunb{
+    width: 100vw;
+    height: 9.02rem;
+    overflow: hidden;
+}
+.lunb img{
+    width: 22.85rem;
+    height: 9.02rem;
+}
+.lunb>ul{
+    /* display:flex; */
+    transform: translate(0,-9.02rem);
+    animation: around 5s linear infinite;
+}
+
+@keyframes around {
+    0%,
+    15% {
+        transform: translate(0,-9.02rem);
+    }
+    25%,
+    33% {
+        transform: translate(0, 0);
+    }
+    43%,
+    66% {
+        transform: translate(0, 0);
+    }
+    76%,
+    99% {
+        transform: translate(, 0);
+    }
+}
+/* ul:hover{
+    animation-play-state: paused;
+} */
+.kec>div img{
+    width: 1.353rem;
+    height: 1.212rem;
+    vertical-align:middle;
+}
+.kec>div {
+    font-size: 1.066rem;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.kec{
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    margin-top: 7.5vw;
+    padding-bottom: 7.5vw;
+    border-bottom: 1px solid #999999;
+}
+.js{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding-top: 5.33vw;
+}
+.js1{
+    width: 21.64rem;
+}
+.js1>img{
+    width: 100%;
+    height: 7.714rem;
+}
+.js2{
+    display: flex;
+    justify-content: space-between;
+    color: #666666;
+}
+.top{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.gun{
+    position: fixed;top: 2.35rem;
+    z-index: 99;
+}
+.space1{
+    width: 100vw;
+    height: 8px;
+    background-color: #f5f5f5;
+    margin-top: 5.33vw;
+}
+.vip{
+    font-size: 1.066rem;
+    font-weight: 700;
+    margin-top: 11.8vw;
+    margin-left: 0.5rem;
+    width: 100vw;
+}
+.vip2>ul>li>img{
+    width: 10.51rem;
+    height: 6.58rem;
+    border-radius: 0.286rem;
+}
+.vip2>ul>li:nth-child(2){
+    font-size: 0.875rem;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 10.51rem;
+}
+.vip2>ul>li:nth-child(3){
+    font-size: 0.857rem;
+    color: #999999;
+}
+.vip1{
+    width: 100vw;
+    height: 9.71rem;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1.285rem;
+}
+.home{
+    position: fixed;
+    z-index: 99;
+  bottom: 0;
+}
+.home span{
+    display: block;
+    /* text-align: center; */
+    font-size: 0.857rem;
+}
+.home{
+    width: 100vw;
+    height: 3.14rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 99;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+}
+ .home img{
+     width: 1.311rem;
+     height: 1.311rem;
+ }
+ .home>div{
+    width: 25%;
+    text-align: center;
+ }
